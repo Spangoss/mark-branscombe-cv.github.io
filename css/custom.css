@@ -1,0 +1,280 @@
+body {
+  position: relative;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+}
+
+.navbar-dark {
+  background-color: transparent !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-dark.stickyadd {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-item {
+  padding: 0 1em;
+}
+
+/* Splash Page */
+.jumbotron {
+  height: 100vh;
+  min-height: 350px;
+  background-size: cover;
+  background-image: url(../images/dark.jpg);
+  background-color: pink;
+  border-radius: 0;
+  position: relative;
+}
+
+.jumbotron h1 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 3.5em;
+}
+
+.jumbotron h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+}
+
+.type-it {
+  padding-left: 1em;
+}
+
+.hero-links a {
+  font-size: 1.2em;
+  color: #6c757d;
+}
+
+.hero-links a :hover {
+  color: #f8f9fa;
+}
+
+/* About Me */
+.about-me {
+  padding: 0 10%;
+}
+
+/* Light Sections */
+.section-certifications {
+  width: 100% background-size: cover;
+  background-image: url(../images/dark.jpg);
+  background-position: center;
+}
+
+.section-certifications .card {
+  min-width: 9em;
+}
+
+.section-certifications .card-img {
+  height: 80px;
+  margin-top: 0;
+}
+
+.carousel-item {
+  min-height: 340px;
+}
+
+/* Timeline */
+.logo {
+  height: 3em;
+  width: 5em;
+  background-color: black;
+  margin: auto;
+}
+
+.timeline {
+  position: relative;
+}
+
+/* Central Line */
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  background: rgba(0, 0, 0, .125);
+  left: 50%;
+  margin-left: 0px;
+}
+
+.timeline>li {
+  margin-bottom: 40px;
+  position: relative;
+  width: 50%;
+  padding-left: 10%;
+  float: left;
+  clear: left;
+}
+
+/* Timeline Panels */
+.timeline>li>.timeline-panel {
+  width: calc(100% - 25px);
+  float: left;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+/* Timeline Panel Triangle Border */
+.timeline>li>.timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid rgba(0, 0, 0, .125);
+  /* Pointing right */
+  border-right: 0 solid rgba(0, 0, 0, .125);
+  /* Pointing left */
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+/* Timeline Panel Triangle Fill (Pointing right) */
+.timeline>li>.timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ffffff;
+  border-right: 0 solid #ffffff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+/* Timeline Badges (Circles) */
+.timeline>li>.timeline-badge {
+  color: #343a40;
+  width: 24px;
+  height: 24px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  right: -12.5px;
+  z-index: 100;
+}
+
+/* Float right sided panels across */
+.timeline>li.timeline-inverted>.timeline-panel {
+  float: right;
+}
+
+/* Align arrow (pointing left) */
+.timeline>li.timeline-inverted>.timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+/*Align arrows (pointing right) */
+.timeline>li.timeline-inverted>.timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline>li.timeline-inverted {
+  float: right;
+  clear: right;
+  padding: 0 10% 0 0;
+}
+
+/* Stagger panels */
+.timeline>li:nth-child(2) {
+  margin-top: 60px;
+}
+
+/* Align Badges */
+.timeline>li.timeline-inverted>.timeline-badge {
+  left: -11.5px;
+}
+
+.no-float {
+  float: none !important;
+}
+
+/* Responsiveness for Timeline */
+@media (max-width: 767px) {
+  ul.timeline:before {
+    left: 40px;
+  }
+
+  ul.timeline>li {
+    margin-bottom: 0px;
+    position: relative;
+    padding-left: 0;
+    width: 100%;
+    float: left;
+    clear: left;
+  }
+
+  ul.timeline>li>.timeline-panel {
+    width: calc(100% - 65px);
+    width: -moz-calc(100% - 65px);
+    width: -webkit-calc(100% - 65px);
+  }
+
+  ul.timeline>li>.timeline-badge {
+    left: 28.5px;
+    margin-left: 0;
+    top: 16px;
+  }
+
+  ul.timeline>li>.timeline-panel {
+    float: right;
+  }
+
+  ul.timeline>li>.timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline>li>.timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+
+  .timeline>li.timeline-inverted {
+    float: left;
+    clear: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .timeline>li.timeline-inverted>.timeline-badge {
+    left: 28px;
+  }
+}
+
+/* Certifications */
+.section-contact {
+  //background-color: blue;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.9)
+}
